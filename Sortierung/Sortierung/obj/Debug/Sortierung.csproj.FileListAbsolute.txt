@@ -1,1 +1,6 @@
 C:\Users\Alex\Documents\GitHub\repos\Sortierung\Sortierung\Sortierung\bin\Debug\Sortierung.exe.config
+C:\Users\Alex\Documents\GitHub\repos\Sortierung\Sortierung\Sortierung\bin\Debug\Sortierung.exe
+C:\Users\Alex\Documents\GitHub\repos\Sortierung\Sortierung\Sortierung\bin\Debug\Sortierung.pdb
+C:\Users\Alex\Documents\GitHub\repos\Sortierung\Sortierung\Sortierung\obj\Debug\Sortierung.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\repos\Sortierung\Sortierung\Sortierung\obj\Debug\Sortierung.exe
+C:\Users\Alex\Documents\GitHub\repos\Sortierung\Sortierung\Sortierung\obj\Debug\Sortierung.pdb
