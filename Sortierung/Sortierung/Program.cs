@@ -30,6 +30,14 @@ namespace Sortierung
              {
                  Console.Write(item + " ");
              }
+            Console.WriteLine();
+            int[] listeDrei = new int[] { 5, 9, 71, 5, 1, 6, 15 };
+            Selectionsort(listeDrei);
+            Console.WriteLine("Selectionsort:");
+            foreach (var item in listeDrei)
+            {
+                Console.Write(item + " ");
+            }
             Console.ReadLine();
         }
         public static int[] Bubbelsort(int[] feld)
@@ -73,6 +81,23 @@ namespace Sortierung
                     j--;
                 }
                 feld[j + 1] = temp;
+            }
+        }
+        public static void Selectionsort(int[] feld)
+        {
+            int min = 0;
+            for (int i = 0; i < feld.Length; i++)
+            {
+                min = i;
+                for (int j = 0; j < feld.Length; j++)
+                {
+                    if (feld[j] > feld[min])
+                    {
+                        int tmp = feld[j];
+                        feld[j] = feld[min];
+                        feld[min] = tmp;
+                    }
+                }
             }
         }
     }
