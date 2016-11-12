@@ -16,7 +16,7 @@ namespace Sortierung
         {
             int[] listeEins = new int[] { 1, 5, 8, 6, 7, 9, 2, 10 };
             int[] listAusgabe = new int[listeEins.Length];
-            listAusgabe = Bubbelsort(listeEins);
+            listAusgabe = Bubbelsort(listeEins,listeEins.Length);
             Console.WriteLine("Bubbelsort:");
             foreach (var item in listAusgabe)
             {
@@ -40,21 +40,18 @@ namespace Sortierung
             }
             Console.ReadLine();
         }
-        public static int[] Bubbelsort(int[] feld)
-        {
-            bool finshedsort;
+        public static int[] Bubbelsort(int[] feld,int n)
+        {            
             int tmp, counter = 0;
-            do
-            {
-                finshedsort = true;
+            if(n> 0)
+            { 
                 for (int i = 0; i < feld.Length - 1; i++)
                 {
                     if (feld[i] > feld[i + 1])
                     {
                         tmp = feld[i];
                         feld[i] = feld[i + 1];
-                        feld[i + 1] = tmp;
-                        finshedsort = false;
+                        feld[i + 1] = tmp;                        
                     }
                     else
                     {
@@ -62,10 +59,11 @@ namespace Sortierung
                     }
                     if (counter == feld.Length-1)
                     {
-                        finshedsort = true;
+                        return feld;
                     }
                 }
-            } while (!finshedsort);
+                return Bubbelsort(feld, feld.Length - 1);
+            } 
             return feld;
         }
         public static void Insertionsort(ref int[] feld)
