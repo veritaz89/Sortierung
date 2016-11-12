@@ -81,7 +81,7 @@ namespace Sortierung
                 feld[j + 1] = temp;
             }
         }
-        public static void Selectionsort(int[] feld)
+        public static void Selectionsort<T>(T[] feld) where T : IComparable
         {
             int min = 0;
             for (int i = 0; i < feld.Length; i++)
@@ -89,14 +89,15 @@ namespace Sortierung
                 min = i;
                 for (int j = 0; j < feld.Length; j++)
                 {
-                    if (feld[j] > feld[min])
-                    {
-                        int tmp = feld[j];
+                    if (feld[j].CompareTo(feld[min]) > 0)
+                     {
+                        T tmp = feld[j];
                         feld[j] = feld[min];
                         feld[min] = tmp;
                     }
                 }
             }
         }
+           
     }
 }
